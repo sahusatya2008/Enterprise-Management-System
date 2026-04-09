@@ -1,0 +1,97 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: erp
+      POSTGRES_USER: erp
+      POSTGRES_PASSWORD: erp
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  inventory-service:
+    build:
+      context: .
+      dockerfile: services/inventory-service/Dockerfile
+    ports:
+      - "4101:4101"
+
+  hr-service:
+    build:
+      context: .
+      dockerfile: services/hr-service/Dockerfile
+    ports:
+      - "4102:4102"
+
+  finance-service:
+    build:
+      context: .
+      dockerfile: services/finance-service/Dockerfile
+    ports:
+      - "4103:4103"
+
+  sales-service:
+    build:
+      context: .
+      dockerfile: services/sales-service/Dockerfile
+    ports:
+      - "4104:4104"
+
+  analytics-service:
+    build:
+      context: .
+      dockerfile: services/analytics-service/Dockerfile
+    ports:
+      - "5001:5001"
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      JWT_SECRET: erp-demo-secret
+      INVENTORY_SERVICE_URL: http://inventory-service:4101
+      HR_SERVICE_URL: http://hr-service:4102
+      FINANCE_SERVICE_URL: http://finance-service:4103
+      SALES_SERVICE_URL: http://sales-service:4104
+      ANALYTICS_SERVICE_URL: http://analytics-service:5001
+    depends_on:
+      - inventory-service
+      - hr-service
+      - finance-service
+      - sales-service
+      - analytics-service
+      - postgres
+      - redis
+      - rabbitmq
+    ports:
+      - "4000:4000"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    environment:
+      NEXT_PUBLIC_ERP_API_URL: http://backend:4000
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+
+volumes:
+  postgres-data:
+

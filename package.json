@@ -1,0 +1,22 @@
+{
+  "name": "erp-system",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "services/*-service"
+  ],
+  "scripts": {
+    "dev": "concurrently -n inventory,hr,finance,sales,analytics,backend,frontend -c blue,green,magenta,cyan,yellow,white,red \"npm run dev -w services/inventory-service\" \"npm run dev -w services/hr-service\" \"npm run dev -w services/finance-service\" \"npm run dev -w services/sales-service\" \"python3 -m uvicorn app.main:app --app-dir services/analytics-service --reload --port 5001\" \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w services/inventory-service && npm run build -w services/hr-service && npm run build -w services/finance-service && npm run build -w services/sales-service && npm run build -w backend && npm run build -w frontend",
+    "typecheck": "npm run typecheck -w services/inventory-service && npm run typecheck -w services/hr-service && npm run typecheck -w services/finance-service && npm run typecheck -w services/sales-service && npm run typecheck -w backend && npm run typecheck -w frontend",
+    "lint": "npm run lint -w frontend",
+    "run:all": "bash ./run-erp.sh",
+    "install:all": "bash ./run-erp.sh --install-only",
+    "stop:all": "bash ./run-erp.sh --stop"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3"
+  }
+}

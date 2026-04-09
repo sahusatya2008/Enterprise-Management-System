@@ -1,0 +1,274 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: erp-system
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: erp-config
+  namespace: erp-system
+data:
+  JWT_SECRET: erp-demo-secret
+  INVENTORY_SERVICE_URL: http://inventory-service:4101
+  HR_SERVICE_URL: http://hr-service:4102
+  FINANCE_SERVICE_URL: http://finance-service:4103
+  SALES_SERVICE_URL: http://sales-service:4104
+  ANALYTICS_SERVICE_URL: http://analytics-service:5001
+  NEXT_PUBLIC_ERP_API_URL: http://backend:4000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inventory-service
+  namespace: erp-system
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: inventory-service
+  template:
+    metadata:
+      labels:
+        app: inventory-service
+    spec:
+      containers:
+        - name: inventory-service
+          image: erp/inventory-service:latest
+          ports:
+            - containerPort: 4101
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: inventory-service
+  namespace: erp-system
+spec:
+  selector:
+    app: inventory-service
+  ports:
+    - port: 4101
+      targetPort: 4101
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hr-service
+  namespace: erp-system
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hr-service
+  template:
+    metadata:
+      labels:
+        app: hr-service
+    spec:
+      containers:
+        - name: hr-service
+          image: erp/hr-service:latest
+          ports:
+            - containerPort: 4102
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hr-service
+  namespace: erp-system
+spec:
+  selector:
+    app: hr-service
+  ports:
+    - port: 4102
+      targetPort: 4102
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: finance-service
+  namespace: erp-system
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: finance-service
+  template:
+    metadata:
+      labels:
+        app: finance-service
+    spec:
+      containers:
+        - name: finance-service
+          image: erp/finance-service:latest
+          ports:
+            - containerPort: 4103
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: finance-service
+  namespace: erp-system
+spec:
+  selector:
+    app: finance-service
+  ports:
+    - port: 4103
+      targetPort: 4103
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sales-service
+  namespace: erp-system
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sales-service
+  template:
+    metadata:
+      labels:
+        app: sales-service
+    spec:
+      containers:
+        - name: sales-service
+          image: erp/sales-service:latest
+          ports:
+            - containerPort: 4104
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sales-service
+  namespace: erp-system
+spec:
+  selector:
+    app: sales-service
+  ports:
+    - port: 4104
+      targetPort: 4104
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: analytics-service
+  namespace: erp-system
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: analytics-service
+  template:
+    metadata:
+      labels:
+        app: analytics-service
+    spec:
+      containers:
+        - name: analytics-service
+          image: erp/analytics-service:latest
+          ports:
+            - containerPort: 5001
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: analytics-service
+  namespace: erp-system
+spec:
+  selector:
+    app: analytics-service
+  ports:
+    - port: 5001
+      targetPort: 5001
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: erp-system
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: erp/backend:latest
+          ports:
+            - containerPort: 4000
+          envFrom:
+            - configMapRef:
+                name: erp-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  namespace: erp-system
+spec:
+  selector:
+    app: backend
+  ports:
+    - port: 4000
+      targetPort: 4000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: erp-system
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: erp/frontend:latest
+          ports:
+            - containerPort: 3000
+          envFrom:
+            - configMapRef:
+                name: erp-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: erp-system
+spec:
+  selector:
+    app: frontend
+  ports:
+    - port: 3000
+      targetPort: 3000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: erp-ingress
+  namespace: erp-system
+spec:
+  rules:
+    - host: erp.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 3000
+

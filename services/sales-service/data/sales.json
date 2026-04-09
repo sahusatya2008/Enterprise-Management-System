@@ -1,0 +1,80 @@
+{
+  "northstar-holdings": {
+    "leads": [
+      {
+        "id": "lead-81240842-c6b6-45d3-a150-4ca43d1da4cf",
+        "company": "Lattice Warehousing",
+        "stage": "Proposal",
+        "value": 420000,
+        "probability": 58,
+        "owner": "Nina Chen"
+      },
+      {
+        "id": "lead-1",
+        "company": "Helios Retail",
+        "stage": "Negotiation",
+        "value": 340000,
+        "probability": 74,
+        "owner": "Nina Chen"
+      },
+      {
+        "id": "lead-2",
+        "company": "Summit Logistics",
+        "stage": "Proposal",
+        "value": 260000,
+        "probability": 61,
+        "owner": "Aditya Rao"
+      },
+      {
+        "id": "lead-3",
+        "company": "Aurora Foods",
+        "stage": "Discovery",
+        "value": 118000,
+        "probability": 33,
+        "owner": "Maya Singh"
+      }
+    ],
+    "customers": [
+      {
+        "id": "cus-1",
+        "name": "Helios Retail",
+        "healthScore": 91,
+        "renewalMonth": "June",
+        "expansionPotential": "high"
+      },
+      {
+        "id": "cus-2",
+        "name": "Summit Logistics",
+        "healthScore": 84,
+        "renewalMonth": "September",
+        "expansionPotential": "medium"
+      }
+    ],
+    "orders": [
+      {
+        "id": "ord-1",
+        "month": "Jan",
+        "booked": 1.9,
+        "won": 1.2
+      },
+      {
+        "id": "ord-2",
+        "month": "Feb",
+        "booked": 2.1,
+        "won": 1.4
+      },
+      {
+        "id": "ord-3",
+        "month": "Mar",
+        "booked": 2.4,
+        "won": 1.5
+      },
+      {
+        "id": "ord-4",
+        "month": "Apr",
+        "booked": 2.7,
+        "won": 1.7
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "northstar-holdings": {
+    "ledger": [
+      {
+        "id": "led-1",
+        "account": "Subscription Revenue",
+        "amount": 182000,
+        "direction": "credit",
+        "counterparty": "Helios Retail",
+        "postedAt": "2026-04-01"
+      },
+      {
+        "id": "led-2",
+        "account": "Vendor Payments",
+        "amount": 94000,
+        "direction": "debit",
+        "counterparty": "Machina Works",
+        "postedAt": "2026-04-02"
+      },
+      {
+        "id": "led-3",
+        "account": "Payroll",
+        "amount": 384000,
+        "direction": "debit",
+        "counterparty": "Northstar Payroll",
+        "postedAt": "2026-04-03"
+      }
+    ],
+    "invoices": [
+      {
+        "id": "inv-1004",
+        "customer": "Vertex Mobility",
+        "amount": 154000,
+        "dueDate": "2026-04-24",
+        "taxRate": 18,
+        "status": "pending"
+      },
+      {
+        "id": "inv-1001",
+        "customer": "Helios Retail",
+        "status": "paid",
+        "amount": 126000,
+        "dueDate": "2026-04-08",
+        "taxRate": 18
+      },
+      {
+        "id": "inv-1002",
+        "customer": "Summit Logistics",
+        "status": "pending",
+        "amount": 92000,
+        "dueDate": "2026-04-12",
+        "taxRate": 18
+      },
+      {
+        "id": "inv-1003",
+        "customer": "Aurora Foods",
+        "status": "overdue",
+        "amount": 41800,
+        "dueDate": "2026-03-29",
+        "taxRate": 12
+      }
+    ]
+  }
+}

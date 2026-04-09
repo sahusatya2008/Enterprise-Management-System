@@ -1,0 +1,105 @@
+{
+  "northstar-holdings": {
+    "products": [
+      {
+        "id": "prd-b84f2c2a-d4d3-4067-b393-161b74058b32",
+        "sku": "ALP-AUT-55",
+        "name": "Autonomous Scanner Pod",
+        "category": "Warehouse Automation",
+        "supplier": "Nova Systems",
+        "warehouse": "Mumbai Central",
+        "stock": 33,
+        "reorderPoint": 15,
+        "unitCost": 740,
+        "trend": "+18%"
+      },
+      {
+        "id": "prd-101",
+        "sku": "ALP-IND-01",
+        "name": "Industrial Sensor Kit",
+        "category": "Industrial IoT",
+        "supplier": "Atlas Components",
+        "warehouse": "Mumbai Central",
+        "stock": 42,
+        "reorderPoint": 55,
+        "unitCost": 480,
+        "trend": "-9%"
+      },
+      {
+        "id": "prd-102",
+        "sku": "ALP-CNC-07",
+        "name": "CNC Spindle Controller",
+        "category": "Manufacturing",
+        "supplier": "Machina Works",
+        "warehouse": "Pune North",
+        "stock": 16,
+        "reorderPoint": 24,
+        "unitCost": 920,
+        "trend": "-22%"
+      },
+      {
+        "id": "prd-103",
+        "sku": "ALP-RET-18",
+        "name": "Retail Edge Gateway",
+        "category": "Retail Tech",
+        "supplier": "Blue Circuit",
+        "warehouse": "Delhi Prime",
+        "stock": 68,
+        "reorderPoint": 40,
+        "unitCost": 210,
+        "trend": "+18%"
+      },
+      {
+        "id": "prd-104",
+        "sku": "ALP-LOG-31",
+        "name": "Logistics Beacon Pack",
+        "category": "Logistics",
+        "supplier": "CargoSense",
+        "warehouse": "Chennai South",
+        "stock": 11,
+        "reorderPoint": 18,
+        "unitCost": 135,
+        "trend": "-22%"
+      }
+    ],
+    "warehouses": [
+      {
+        "id": "wh-1",
+        "name": "Mumbai Central",
+        "utilization": 58,
+        "outboundToday": 50,
+        "inboundToday": 37
+      },
+      {
+        "id": "wh-2",
+        "name": "Pune North",
+        "utilization": 56,
+        "outboundToday": 50,
+        "inboundToday": 24
+      },
+      {
+        "id": "wh-3",
+        "name": "Delhi Prime",
+        "utilization": 58,
+        "outboundToday": 50,
+        "inboundToday": 24
+      },
+      {
+        "id": "wh-4",
+        "name": "Chennai South",
+        "utilization": 55,
+        "outboundToday": 50,
+        "inboundToday": 24
+      }
+    ],
+    "movements": [
+      {
+        "id": "mov-7a292444-aed3-4bed-ac79-4cfd5deeccea",
+        "productId": "prd-b84f2c2a-d4d3-4067-b393-161b74058b32",
+        "delta": 5,
+        "note": "Cycle count correction",
+        "createdAt": "2026-04-07T19:09:56.928Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+node_modules
+.next
+dist
+.DS_Store
+coverage
+*.log
+.env
+.venv
+__pycache__
+.erp-runtime

@@ -1,0 +1,270 @@
+[
+  {
+    "id": "audit-128",
+    "action": "VIEW_MODULE",
+    "actor": "admin@northstar.com",
+    "module": "hr",
+    "detail": "hr module opened through REST.",
+    "timestamp": "2026-04-08T07:46:03.431Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-127",
+    "action": "VIEW_MODULE",
+    "actor": "admin@northstar.com",
+    "module": "hr",
+    "detail": "hr module opened through REST.",
+    "timestamp": "2026-04-08T07:46:03.427Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-126",
+    "action": "VIEW_MODULE",
+    "actor": "admin@northstar.com",
+    "module": "finance",
+    "detail": "finance module opened through REST.",
+    "timestamp": "2026-04-08T07:45:47.799Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-125",
+    "action": "VIEW_MODULE",
+    "actor": "admin@northstar.com",
+    "module": "finance",
+    "detail": "finance module opened through REST.",
+    "timestamp": "2026-04-08T07:45:47.783Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-124",
+    "action": "SIMULATE_SCENARIO",
+    "actor": "admin@northstar.com",
+    "module": "analytics",
+    "detail": "Scenario simulation executed.",
+    "timestamp": "2026-04-08T07:37:31.639Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-123",
+    "action": "SIMULATE_SCENARIO",
+    "actor": "admin@northstar.com",
+    "module": "analytics",
+    "detail": "Scenario simulation executed.",
+    "timestamp": "2026-04-08T07:37:31.636Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-122",
+    "action": "VIEW_DASHBOARD",
+    "actor": "admin@northstar.com",
+    "module": "executive",
+    "detail": "Executive cockpit snapshot loaded.",
+    "timestamp": "2026-04-08T07:37:31.628Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-121",
+    "action": "VIEW_DASHBOARD",
+    "actor": "admin@northstar.com",
+    "module": "executive",
+    "detail": "Executive cockpit snapshot loaded.",
+    "timestamp": "2026-04-08T07:37:31.626Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-120",
+    "action": "ASK_COPILOT",
+    "actor": "admin@northstar.com",
+    "module": "analytics",
+    "detail": "Business copilot was queried.",
+    "timestamp": "2026-04-08T07:37:26.110Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-119",
+    "action": "ASK_COPILOT",
+    "actor": "admin@northstar.com",
+    "module": "analytics",
+    "detail": "Business copilot was queried.",
+    "timestamp": "2026-04-08T07:37:25.240Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-118",
+    "action": "ASK_COPILOT",
+    "actor": "admin@northstar.com",
+    "module": "analytics",
+    "detail": "Business copilot was queried.",
+    "timestamp": "2026-04-08T07:37:21.262Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-117",
+    "action": "VIEW_AI_WORKBENCH",
+    "actor": "admin@northstar.com",
+    "module": "analytics",
+    "detail": "Opened the AI workbench.",
+    "timestamp": "2026-04-08T07:37:13.924Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-116",
+    "action": "VIEW_AI_WORKBENCH",
+    "actor": "admin@northstar.com",
+    "module": "analytics",
+    "detail": "Opened the AI workbench.",
+    "timestamp": "2026-04-08T07:37:13.922Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-115",
+    "action": "ASK_COPILOT",
+    "actor": "admin@northstar.com",
+    "module": "analytics",
+    "detail": "Business copilot was queried.",
+    "timestamp": "2026-04-08T07:36:28.651Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-114",
+    "action": "ASK_COPILOT",
+    "actor": "admin@northstar.com",
+    "module": "analytics",
+    "detail": "Business copilot was queried.",
+    "timestamp": "2026-04-08T07:36:14.210Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-113",
+    "action": "SIMULATE_SCENARIO",
+    "actor": "admin@northstar.com",
+    "module": "analytics",
+    "detail": "Scenario simulation executed.",
+    "timestamp": "2026-04-08T07:35:52.469Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-112",
+    "action": "SIMULATE_SCENARIO",
+    "actor": "admin@northstar.com",
+    "module": "analytics",
+    "detail": "Scenario simulation executed.",
+    "timestamp": "2026-04-08T07:35:52.467Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-111",
+    "action": "VIEW_DASHBOARD",
+    "actor": "admin@northstar.com",
+    "module": "executive",
+    "detail": "Executive cockpit snapshot loaded.",
+    "timestamp": "2026-04-08T07:35:52.446Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-110",
+    "action": "VIEW_DASHBOARD",
+    "actor": "admin@northstar.com",
+    "module": "executive",
+    "detail": "Executive cockpit snapshot loaded.",
+    "timestamp": "2026-04-08T07:35:52.441Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-109",
+    "action": "LOGIN",
+    "actor": "admin@northstar.com",
+    "module": "auth",
+    "detail": "User authenticated successfully.",
+    "timestamp": "2026-04-08T07:35:51.783Z",
+    "severity": "info",
+    "subjectId": "usr-admin",
+    "subjectEmail": "admin@northstar.com",
+    "ipAddress": "::1"
+  },
+  {
+    "id": "audit-108",
+    "action": "LOGIN",
+    "actor": "qa.audit.1775621556@northstar.com",
+    "module": "auth",
+    "detail": "User authenticated successfully.",
+    "timestamp": "2026-04-08T04:12:38.558Z",
+    "severity": "info",
+    "subjectId": "usr-2b54e5d9-61ad-4778-a6d6-1c8902403d11",
+    "subjectEmail": "qa.audit.1775621556@northstar.com",
+    "ipAddress": "::ffff:127.0.0.1"
+  },
+  {
+    "id": "audit-107",
+    "action": "ASK_COPILOT",
+    "actor": "admin@northstar.com",
+    "module": "analytics",
+    "detail": "Business copilot was queried.",
+    "timestamp": "2026-04-08T04:12:38.343Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-106",
+    "action": "VIEW_AI_WORKBENCH",
+    "actor": "admin@northstar.com",
+    "module": "analytics",
+    "detail": "Opened the AI workbench.",
+    "timestamp": "2026-04-08T04:12:38.289Z",
+    "severity": "info"
+  },
+  {
+    "id": "audit-105",
+    "action": "RESET_PASSWORD",
+    "actor": "admin@northstar.com",
+    "module": "admin",
+    "detail": "Reset password for qa.audit.1775621556@northstar.com.",
+    "timestamp": "2026-04-08T04:12:37.707Z",
+    "severity": "warning",
+    "subjectId": "usr-2b54e5d9-61ad-4778-a6d6-1c8902403d11",
+    "subjectEmail": "qa.audit.1775621556@northstar.com"
+  },
+  {
+    "id": "audit-104",
+    "action": "REGISTER",
+    "actor": "qa.audit.1775621556@northstar.com",
+    "module": "auth",
+    "detail": "New employee account registered.",
+    "timestamp": "2026-04-08T04:12:36.945Z",
+    "severity": "info",
+    "subjectId": "usr-2b54e5d9-61ad-4778-a6d6-1c8902403d11",
+    "subjectEmail": "qa.audit.1775621556@northstar.com"
+  },
+  {
+    "id": "audit-103",
+    "action": "LOGIN",
+    "actor": "employee@northstar.com",
+    "module": "auth",
+    "detail": "User authenticated successfully.",
+    "timestamp": "2026-04-08T04:12:36.890Z",
+    "severity": "info",
+    "subjectId": "usr-employee",
+    "subjectEmail": "employee@northstar.com",
+    "ipAddress": "::ffff:127.0.0.1"
+  },
+  {
+    "id": "audit-102",
+    "action": "LOGIN",
+    "actor": "admin@northstar.com",
+    "module": "auth",
+    "detail": "User authenticated successfully.",
+    "timestamp": "2026-04-08T04:12:36.799Z",
+    "severity": "info",
+    "subjectId": "usr-admin",
+    "subjectEmail": "admin@northstar.com",
+    "ipAddress": "::ffff:127.0.0.1"
+  },
+  {
+    "id": "audit-100",
+    "action": "SYSTEM_BOOT",
+    "actor": "platform",
+    "module": "core",
+    "detail": "ERP control plane initialized with live module adapters.",
+    "timestamp": "2026-04-08T04:03:50.965Z",
+    "severity": "info"
+  }
+]

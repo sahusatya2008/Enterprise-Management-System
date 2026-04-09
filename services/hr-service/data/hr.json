@@ -1,0 +1,83 @@
+{
+  "northstar-holdings": {
+    "employees": [
+      {
+        "id": "emp-284c13f0-5abb-4923-a84f-2e42b518cf9c",
+        "name": "Mira Kapoor",
+        "department": "Operations",
+        "role": "Operations Specialist",
+        "manager": "Jordan Lee",
+        "performanceScore": 84,
+        "productivityScore": 82,
+        "attritionRisk": 9,
+        "salary": 118000,
+        "status": "active",
+        "leaveBalance": 12
+      },
+      {
+        "id": "emp-1",
+        "name": "Riya Shah",
+        "department": "Business Operations",
+        "role": "Senior Analyst",
+        "manager": "Jordan Lee",
+        "performanceScore": 92,
+        "productivityScore": 88,
+        "attritionRisk": 11,
+        "salary": 168000,
+        "status": "active",
+        "leaveBalance": 14
+      },
+      {
+        "id": "emp-2",
+        "name": "Arjun Patel",
+        "department": "Sales",
+        "role": "Account Executive",
+        "manager": "Nina Chen",
+        "performanceScore": 86,
+        "productivityScore": 84,
+        "attritionRisk": 19,
+        "salary": 142000,
+        "status": "active",
+        "leaveBalance": 10
+      },
+      {
+        "id": "emp-3",
+        "name": "Priya Nair",
+        "department": "Finance",
+        "role": "Controller",
+        "manager": "Avery Morgan",
+        "performanceScore": 90,
+        "productivityScore": 89,
+        "attritionRisk": 8,
+        "salary": 176000,
+        "status": "active",
+        "leaveBalance": 11
+      },
+      {
+        "id": "emp-4",
+        "name": "Omar Hassan",
+        "department": "Inventory",
+        "role": "Warehouse Lead",
+        "manager": "Jordan Lee",
+        "performanceScore": 79,
+        "productivityScore": 77,
+        "attritionRisk": 16,
+        "salary": 126000,
+        "status": "on-leave",
+        "leaveBalance": 7
+      }
+    ],
+    "leaveRequests": [
+      {
+        "id": "leave-1",
+        "employeeId": "emp-4",
+        "employeeName": "Omar Hassan",
+        "department": "Inventory",
+        "startDate": "2026-04-08",
+        "endDate": "2026-04-11",
+        "reason": "Planned personal leave",
+        "status": "approved"
+      }
+    ]
+  }
+}
