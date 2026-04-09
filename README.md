@@ -145,4 +145,7 @@ Detailed API contracts live in [api-spec.md](docs/api-spec.md).
 - The current code ships with seeded in-memory data so the platform is runnable immediately.
 - The deployment shape already anticipates PostgreSQL, Redis, and RabbitMQ-backed production hardening.
 - Multi-tenant support begins with tenant-aware payloads and can be extended with schema or row-level isolation.
-# Enterprise-Management-System
+
+## Developer & Note:
+- Satya Narayan Sahu
+- This entire system project is totally owned by Satya Narayan Sahu and it is strcitly prohibited to copy/modify/commericial use. Only open for educational purpose to understand the infra. of the entire built syste.
