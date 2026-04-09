@@ -1,4 +1,4 @@
-# Intelligent ERP System
+# SNSAI - Intelligent ERP System - SNSX Controlled
 
 An enterprise-grade, fully web-based ERP platform with a polished executive UI, modular service boundaries, AI-assisted decision support, and deployment tooling for local or Kubernetes-based environments.
 
